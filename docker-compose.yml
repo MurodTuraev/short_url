@@ -8,8 +8,8 @@ services:
     expose:
       - 8000
     volumes:
-      - /home/testserver/exam/static:/app/static
-      - /home/testserver/exam/mediafiles:/app/mediafiles
+      - /home/testserver/short_url/static:/app/static
+      - /home/testserver/short_url/media:/app/media
     entrypoint:
       - ./entrypoint.sh
 
@@ -18,8 +18,8 @@ services:
     build: ./nginx
 
     volumes:
-      - /home/testserver/exam/static:/app/static
-      - /home/testserver/exam/mediafiles:/app/mediafiles
+      - /home/testserver/short_url/static:/app/static
+      - /home/testserver/short_url/media:/app/media
     ports:
       - 2442:80
     depends_on:
